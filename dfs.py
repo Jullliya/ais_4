@@ -9,9 +9,20 @@ g = []
 for i in range(n):
     g.append([0]*n)
 
-path = 0
-start = int(input("Enter the start point: ")) - 1
-end = int(input("Enter the last point: ")) - 1
+path, start, end = 0, 0, 0
+while start > n-1 or start <= 0:
+    start = int(input("Enter the start point: ")) - 1
+    if start > n-1:
+        print("Incorrect value of start number, start more than graph dimensions.")
+    if start < 0:
+        print("Incorrect value of start number, start cannot be negative or zero. ")
+while end > n-1 or end <= 0:
+    end = int(input("Enter the last point: ")) - 1
+    if end > n-1:
+        print("Incorrect value of start number, end more than graph dimensions.")
+    if end < 0:
+        print("Incorrect value of start number, end cannot be negative or zero. ")
+
 visited = [False] * (n + 1)
 prev = [-1] * (n + 1)
 
