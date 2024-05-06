@@ -3,7 +3,7 @@ n = int(input("Enter the count of points in graph: "))
 pair = []
 # введем количество пар соединенных вершин
 m = int(input("Enter the number of pairs: "))
-# введем пары соединений вершин
+# введем пaры соединений вершин
 print("Enter the pair of point: ")
 
 for i in range(m):
